@@ -1,0 +1,45 @@
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  annotations:
+    openshift.io/display-name: OpenResty Web Platform 1.19
+    openshift.io/image.dockerRepositoryCheck: "2022-04-03T18:19:31Z"
+  creationTimestamp: "2022-04-03T16:30:34Z"
+  generation: 12
+  name: openresty
+  namespace: openshift
+  resourceVersion: "92095"
+  uid: dc887a03-670c-4b2e-8bc5-c02663f36483
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+  - annotations:
+      description: Build and serve static/dynamic content via OpenResty 1.19 on Alpine
+        3.15. For more information about using this builder image, including Openshift
+        considerations, see https://github.com/hector-vido/lua-s2i/README.md.
+      iconClass: icon-phalcon
+      openshift.io/display-name: OpenResty Web Platform 1.19 (Alpine)
+      openshift.io/provider-display-name: Hector Vido
+      sampleRepo: https://github.com/hector-vido/lua-ms
+      supports: openresty
+      tags: builder,openresty
+      version: 1.19.9
+    from:
+      kind: DockerImage
+      name: image-registry.openshift-image-registry.svc:5000/openshift/openresty
+    generation: 3
+    importPolicy: {}
+    name: latest
+    referencePolicy:
+      type: Local
+status:
+  dockerImageRepository: image-registry.openshift-image-registry.svc:5000/openshift/openresty
+  publicDockerImageRepository: default-route-openshift-image-registry.apps-crc.testing/openshift/openresty
+  tags:
+  - items:
+    - created: "2022-04-03T16:30:34Z"
+      dockerImageReference: image-registry.openshift-image-registry.svc:5000/openshift/openresty@sha256:15b53e105a6d0af369e340114abd41331466f87d8672305dc4bae5c10784a5d8
+      generation: 3
+      image: sha256:15b53e105a6d0af369e340114abd41331466f87d8672305dc4bae5c10784a5d8
+    tag: latest

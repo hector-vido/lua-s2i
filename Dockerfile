@@ -12,7 +12,7 @@ LABEL maintainer="Hector Vido <hvidosil@redhat.com>"
 
 # Exporta uma variável de ambiente que fornece informações sobre a versão dessa aplicação
 # Substitua isto pela versão da sua aplicação
-ENV NGINX_VERSION=1.19.9
+ENV OPENRESTY_VERSION=1.19.9
 
 # Configura os "labels" usados pelo OpenShift para descrever a imagem
 LABEL io.k8s.description="OpenResty server" \
